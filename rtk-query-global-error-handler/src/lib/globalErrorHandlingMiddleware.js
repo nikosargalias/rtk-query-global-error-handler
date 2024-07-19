@@ -17,7 +17,7 @@ globalErrorHandlerMiddleware.startListening({
             console.log('GloballyHandledRequest', action);
             //  Handle Erros
             listenerApi.dispatch(
-                showSnackbar('An error occurred: ' + action.payload.error)
+                showSnackbar(action.payload.data)
             );
             return;
         }
